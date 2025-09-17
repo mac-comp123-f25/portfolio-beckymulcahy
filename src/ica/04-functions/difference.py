@@ -8,7 +8,6 @@ def smallest_diff(x, y, z):
     return min_diff
 smallest_diff(3, 9, 5)
 
-
 def smallest_diff(x, y, z):
     diff1 = abs(x - y)
     diff2 = abs(y - z)
