@@ -43,6 +43,8 @@ def square_user_nums():
 
 # when commenting out the first pair, cannot access local variable 'user_num' where it is not associated with a value this is the error message you get
 # when commenting out the second pair, the code still works
+
+
 def sum_to_n(top_num):
     """
     Takes in a number and computes and returns the sum of the numbers
@@ -53,8 +55,22 @@ def sum_to_n(top_num):
     while curr_val <= top_num:
         total = total + curr_val
         curr_val = curr_val + 3
+        print(curr_val, total)
 
     return total
+
+def add_user_nums() :
+    sum_of_nums = 0
+    curr_val = 0
+    while curr_val <= top_num:
+        total = sum_of_nums + curr_val
+        curr_val = curr_val + 3
+        user_inp = input("Enter number: ")
+        user_num = int(user_inp)
+
+
+    return (sum_of_nums)
+
 
 
 def next_word(text):
