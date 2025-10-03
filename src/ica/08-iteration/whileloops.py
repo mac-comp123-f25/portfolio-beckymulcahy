@@ -108,4 +108,4 @@ if __name__ == '__main__':
     print("nextWord('Frederick!') does:")
     print(next_word('Frederick!'))
 
-    print_every_fifth(20)
+
