@@ -41,7 +41,8 @@ def square_user_nums():
         user_inp = input("Enter the next number (negative to quit): ")
         user_num = int(user_inp)
 
-
+# when commenting out the first pair, cannot access local variable 'user_num' where it is not associated with a value this is the error message you get
+# when commenting out the second pair, the code still works
 def sum_to_n(top_num):
     """
     Takes in a number and computes and returns the sum of the numbers
