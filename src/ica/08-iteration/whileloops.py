@@ -61,15 +61,14 @@ def sum_to_n(top_num):
 
 def add_user_nums() :
     sum_of_nums = 0
-    curr_val = 0
-    while curr_val <= top_num:
-        total = sum_of_nums + curr_val
-        curr_val = curr_val + 3
-        user_inp = input("Enter number: ")
-        user_num = int(user_inp)
+    user_num = int(input("Enter number: "))
+    while user_num != 0:
+        sum_of_nums = sum_of_nums + user_num
+        user_num = int(input("Enter number: "))
 
 
     return (sum_of_nums)
+print(add_user_nums())
 
 
 
