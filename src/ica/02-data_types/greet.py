@@ -1,3 +1,4 @@
-kind_person = 'Aunt Jodi'
-thank_you_note = 'Dear ' + kind_person +  ( ', Thank you for the graduation present.' +  ' I can’t wait to use it.' + ' I hope you are enjoying your summer.' + ' You’re the best, Aunt Judi!' + ' Love, Mittens ')
-print(thank_you_note)
+kind_person = ('Helen and Gabby')
+print('''Dear''', kind_person + ''',
+
+You are amazing! :)''')
