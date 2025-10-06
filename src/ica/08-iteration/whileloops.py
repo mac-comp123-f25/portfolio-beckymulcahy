@@ -10,13 +10,23 @@ def print_every_other(x):
     """
     Prints every other value from a given number down to zero
     """
-    while x >= 0:      # x is the loop variable
+    while x >= 0:  # x is the loop variable
         print(x)
         x = x - 2
 
     # when indentation stops, while loop is over
     print("Done!")
 
+def print_every_fifth(x):
+    """
+    Prints every fifth value from a given number down to zero
+    """
+    while x >= 0:  # x is the loop variable
+        print(x)
+        x = x - 5
+
+    # when indentation stops, while loop is over
+    print("Done!")
 
 def square_user_nums():
     """
@@ -31,6 +41,9 @@ def square_user_nums():
         user_inp = input("Enter the next number (negative to quit): ")
         user_num = int(user_inp)
 
+# when commenting out the first pair, cannot access local variable 'user_num' where it is not associated with a value this is the error message you get
+# when commenting out the second pair, the code still works
+
 
 def sum_to_n(top_num):
     """
@@ -38,12 +51,25 @@ def sum_to_n(top_num):
     from zero to the input number.
     """
     curr_val = 0  # loop variable
-    total = 0    # accumulator variable
+    total = 0  # accumulator variable
     while curr_val <= top_num:
         total = total + curr_val
         curr_val = curr_val + 3
+        print(curr_val, total)
 
     return total
+
+def add_user_nums() :
+    sum_of_nums = 0
+    user_num = int(input("Enter number: "))
+    while user_num != 0:
+        sum_of_nums = sum_of_nums + user_num
+        user_num = int(input("Enter number: "))
+
+
+    return (sum_of_nums)
+print(add_user_nums())
+
 
 
 def next_word(text):
@@ -88,7 +114,7 @@ if __name__ == '__main__':
     print(sum_to_n(3))
     print("sumToN(100) does:")
     print(sum_to_n(100))
-    
+
     print_seperator_line()
     print("Sample calls to nextWord:")
     print("nextWord('Friends, Romans, countrymen') does:")

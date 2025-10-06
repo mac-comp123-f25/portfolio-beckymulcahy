@@ -6,3 +6,4 @@ c = 20
 e = 0
 d = a/b
 print(d)
+# deleted the extra b variable with the value of 0
