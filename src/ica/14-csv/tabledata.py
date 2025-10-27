@@ -35,6 +35,12 @@ def lookup_phone(name, direct_table):
 
     return "No entry: " + name
 
+def lookup_office (name, table) :
+    for row in table:
+        if row['Name'] == name:
+            return row['OfficeNum'] , row['Building']
+
+    return "No entry: " + name
 
 def collect_by_building(building, table):
     """
