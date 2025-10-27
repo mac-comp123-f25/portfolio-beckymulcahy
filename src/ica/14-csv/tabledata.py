@@ -119,3 +119,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+def collect_by_letter(letter, table) :
+    letter = letter.upper()
+    match_list = []
+    for row in table:
+        if row['Letter'] == letter:
+            match_list.append(row)
+    return match_list
