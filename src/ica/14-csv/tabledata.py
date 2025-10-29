@@ -127,3 +127,28 @@ def collect_by_letter(letter, table) :
         if row['Letter'] == letter:
             match_list.append(row)
     return match_list
+
+def select_by_month (month, table) :
+    result = []
+    for row in table:
+        if row['Month'] == month:
+            result.append(row)
+    return result
+
+def average_daylight_time (table) :
+    total_daylight = 0
+
+    for row in table:
+        sunrise_hr = int(row['SunSetHour'])
+        sunrise_min = int(row['SunSetMinute'])
+        sunset_hr = int(row['SunSetHour'])
+        sunset_min = int(row['SunSetMinute'])
+
+        daylight = daylight_hours(sunrise_hr, sunrise_min, sunset_hr, sunset_min)
+        total_daylight += daylight
+
+        if len(table) == 0:
+            return 0
+
+    average_daylight = total_daylight / len(table)
+    return average_daylight
