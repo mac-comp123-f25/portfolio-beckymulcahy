@@ -27,12 +27,22 @@ def read_living_wage_data(filename):
 
 
 def get_state_living_wage(state, table):
-    """
+     """
     Given the name of a state (or its abbreviation) as a string, and a
     living wage table (a list of dictionaries), this looks up the given
     state's row dictionary, and returns the annual living wage for that state.
     """
-    # TODO: finish this function
+    state = state.lower()
+
+    for row in table:
+        name = row['State'].lower()
+        abbrev = row.get('Abbreviation', ' ').lower()
+
+        if state == name or state == abbrev:
+            return float(row['AnnualLivingWage'])
+
+        return None
+
     pass
 
 
