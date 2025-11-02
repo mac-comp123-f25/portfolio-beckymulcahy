@@ -19,7 +19,9 @@ class Employee:
         saves those values to instance variables. It also initializes the
         variable that holds the comments received by this employee to zero.
         """
-        # TODO: Implement this method then remove this line
+        self.gender = gender
+        self.will_comment = will_comment
+        self.comments_received = 0
         pass
 
     def __str__(self):
@@ -30,6 +32,7 @@ class Employee:
                 + ": "
                 + str(self.comments_received)
                 + " sexist comments received")
+
 
 
 def print_employee_list(lst):
