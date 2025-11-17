@@ -1,20 +1,22 @@
 from src.ica.helpers.imageTools import *
 from src.ica.helpers.dummyWindow import *
 
-def copy_pic_into(small_pic, big_pic, start_x, start_y):
-    for (x,y) in small_pic:
-        color = small_pic.getColor(x,y)
-        target_x = start_x + x
-        target_y = start_y + y
+def crop_picture(image, start_x, start_y, crop_width, crop_height):
+    cropped = Picture(crop_width, crop_height)
 
-        big_pic.setColor(target_x, target_y, color)
+    for x in range(crop_width):
+        for y in range(crop_height):
+            original_x = start_x + x
+            original_y = start_y + y
+            color = image.getColor(original_x,original_y)
+            cropped.setColor(x, y, color)
 
+    return cropped
 
-green_turtle = Picture("../SampleImages/greenTurtle.jpg")
-scene = Picture("../SampleImages/bearLake.jpg")
-copy_pic_into(green_turtle, scene, 25, 25)
-copy_pic_into(green_turtle, scene, 200, 200)
-copy_pic_into(green_turtle, scene, 400, 200)
-scene.show()
+dam = Picture("../SampleImages/hooverDam.jpg")
+dam_crop1 = crop_picture(dam, 260, 90, 240, 210)
+dam_crop2 = crop_picture(dam, 100, 150, 100, 150)
+dam_crop1.show()
+dam_crop2.show()
 
 keep_windows_open()
